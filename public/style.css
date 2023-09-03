@@ -18,3 +18,33 @@ body {
   justify-content: center;
 }
 
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: #fff;
+  font-size: 50px;
+  margin: 0;
+  text-shadow: 2px black;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 35px;
+}
+
+.row {
+  display: flex;
+}
+
+.btn {
+  width: 75px;
+  
+}
