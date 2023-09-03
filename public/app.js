@@ -37,13 +37,40 @@ function checkForWinOrDraw() {
             buttons[a].textContent===buttons[c].textContent
         ) {
             gameOver = true;
-            resultText.textContent = `Player ${buttons[a].textContent} wins!`;
+            resultText.textContent = `Player ${buttons[a].textContent} won`;
             resetButton.disabled = false;
             return;
         }
     }
 
     if (moves===buttons.length) {
-        
+        gameOver = true;
+        resultText.textContent = "It's a draw!";
+        resetButton.disabled = false;
+        return;
     }
 }
+
+function resetGame() {
+    buttons.forEach((button) => {
+        button.textContent = "";
+        button.disabled = false;
+    });
+
+    currentPlayer = "X";
+    moves = 0;
+    gameOver = false;
+    message.textContent = "Player X turn";
+    resultText.textContent = "";
+    resetButton.disabled = true;
+}
+
+buttons.forEach((button) => {
+    button.addEventListener("click",()=> {
+        handleMove(button);
+    });
+});
+
+resetButton.addEventListener("click",()=> {
+    resetGame();
+});
