@@ -37,7 +37,7 @@ function checkForWinOrDraw() {
             buttons[a].textContent===buttons[c].textContent
         ) {
             gameOver = true;
-            message.textContent = `Player ${buttons[a].textContent} won`;
+            message.textContent = `Player ${buttons[a].textContent} won 🎉`;
             resetButton.disabled = false;
             return;
         }
@@ -45,7 +45,7 @@ function checkForWinOrDraw() {
 
     if (moves===buttons.length) {
         gameOver = true;
-        resultText.textContent = "It's a draw!";
+        message.textContent = "It's a draw!";
         resetButton.disabled = false;
         return;
     }
@@ -61,7 +61,7 @@ function resetGame() {
     moves = 0;
     gameOver = false;
     message.textContent = "Player X turn";
-    resultText.textContent = "";
+    //message.textContent = "";
     resetButton.disabled = true;
 }
 
