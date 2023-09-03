@@ -37,7 +37,7 @@ function checkForWinOrDraw() {
             buttons[a].textContent===buttons[c].textContent
         ) {
             gameOver = true;
-            resultText.textContent = `Player ${buttons[a].textContent} won`;
+            message.textContent = `Player ${buttons[a].textContent} won`;
             resetButton.disabled = false;
             return;
         }
